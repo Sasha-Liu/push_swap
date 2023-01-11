@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlen.c                                        :+:      :+:    :+:   */
+/*   ft_pop.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/10 13:59:45 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/11 17:37:45 by hsliu            ###   ########.fr       */
+/*   Created: 2023/01/11 18:09:15 by hsliu             #+#    #+#             */
+/*   Updated: 2023/01/11 20:59:00 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lstft.h"
 
-int	ft_lstlen(t_node *head)
+//return null if empty
+t_node	*ft_pop(t_node **head)
 {
-	int	i;
-
-	i = 0;
-	while (head->data != NULL)
-	{
-		head = head->next;
-	}
-	head = head->next;
-	while (head->data != NULL)
-	{
-		head = head->next;
-		i++;
-	}
-	return (i);
+	t_node	*first;
+	t_node	*second;
+	t_node	*last;
+	
+	if (ft_isempty(head))
+		return (NULL);
+	first = *head;
+	second = first->next;
+	last = first->prev;
+	second->prev = last;
+	last->next = second;
+	*head = second;
+	return (first);
 }

@@ -1,31 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlen.c                                        :+:      :+:    :+:   */
+/*   ft_push.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/10 13:59:45 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/11 17:37:45 by hsliu            ###   ########.fr       */
+/*   Created: 2023/01/11 17:49:53 by hsliu             #+#    #+#             */
+/*   Updated: 2023/01/11 18:08:38 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lstft.h"
 
-int	ft_lstlen(t_node *head)
+void	ft_push(t_node **head, t_node *node)
 {
-	int	i;
-
-	i = 0;
-	while (head->data != NULL)
+	t_node	*first;
+	t_node	*last;
+	int		size;
+	
+	size = ft_lstlen(*head);
+	first = *head;
+	last = first->prev;
+	if (size == 0)
 	{
-		head = head->next;
+		node->next = first;
+		node->prev = first;
+		first->next = node;
+		first->prev = node;
 	}
-	head = head->next;
-	while (head->data != NULL)
+	else
 	{
-		head = head->next;
-		i++;
+		node->next = first;
+		node->prev = last;
+		first->prev = node;
+		last->next = node;
 	}
-	return (i);
+	*head = node;
 }

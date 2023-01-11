@@ -1,31 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlen.c                                        :+:      :+:    :+:   */
+/*   ft_create_lst.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/10 13:59:45 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/11 17:37:45 by hsliu            ###   ########.fr       */
+/*   Created: 2023/01/11 17:44:18 by hsliu             #+#    #+#             */
+/*   Updated: 2023/01/11 17:47:10 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lstft.h"
 
-int	ft_lstlen(t_node *head)
+t_node	*ft_create_lst(void)
 {
-	int	i;
+	t_node	*head;
 
-	i = 0;
-	while (head->data != NULL)
-	{
-		head = head->next;
-	}
-	head = head->next;
-	while (head->data != NULL)
-	{
-		head = head->next;
-		i++;
-	}
-	return (i);
+	head = ft_newnode(NULL);
+	if (head == NULL)
+		return (NULL);
+	head->prev = head;
+	head->next = head;
+	return (head);
 }

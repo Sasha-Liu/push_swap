@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlen.c                                        :+:      :+:    :+:   */
+/*   ft_newnode.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/10 13:59:45 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/11 17:37:45 by hsliu            ###   ########.fr       */
+/*   Created: 2023/01/11 17:38:59 by hsliu             #+#    #+#             */
+/*   Updated: 2023/01/11 17:43:30 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lstft.h"
 
-int	ft_lstlen(t_node *head)
+t_node	*ft_newnode(void *data)
 {
-	int	i;
+	t_node	*new_node;
 
-	i = 0;
-	while (head->data != NULL)
-	{
-		head = head->next;
-	}
-	head = head->next;
-	while (head->data != NULL)
-	{
-		head = head->next;
-		i++;
-	}
-	return (i);
+	new_node = malloc(sizeof(t_node));
+	if (new_node == NULL)
+		return (NULL);
+	new_node->data = data;
+	new_node->prev = NULL;
+	new_node->next = NULL;
+	return (new_node);
 }
