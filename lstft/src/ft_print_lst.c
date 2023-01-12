@@ -6,7 +6,7 @@
 /*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 21:36:48 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/12 10:58:12 by hsliu            ###   ########.fr       */
+/*   Updated: 2023/01/12 11:37:57 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,13 @@ void	ft_print_lst(t_node *head)
 		write(1, "List is empty\n", 15);
 		return ;
 	}
-	while (head->data)
+	while (head->data != -1)
 	{
 		ft_print_node(head);
 		head = head->next;
 		size--;
 	}
-	write(1, "null", 5);
+	write(1, "end -> ", 7);
 	head = head->next;
 	while (size > 0)
 	{	
@@ -44,7 +44,7 @@ void	ft_print_lst(t_node *head)
 
 static void	ft_print_node(t_node *node)
 {
-	ft_putnbr_fd(*((int *)node->data), 1);
+	ft_putnbr_fd(node->data, 1);
 	write(1, " (", 2);
 	ft_putnbr_fd(node->order, 1);
 	write(1, ") -> ", 5);

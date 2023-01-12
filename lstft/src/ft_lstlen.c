@@ -6,7 +6,7 @@
 /*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 13:59:45 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/11 17:37:45 by hsliu            ###   ########.fr       */
+/*   Updated: 2023/01/12 11:06:56 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,12 @@ int	ft_lstlen(t_node *head)
 	int	i;
 
 	i = 0;
-	while (head->data != NULL)
+	while (head->data != -1)
 	{
 		head = head->next;
 	}
 	head = head->next;
-	while (head->data != NULL)
+	while (head->data != -1)
 	{
 		head = head->next;
 		i++;

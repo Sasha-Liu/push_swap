@@ -6,7 +6,7 @@
 /*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 17:44:18 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/11 17:47:10 by hsliu            ###   ########.fr       */
+/*   Updated: 2023/01/12 11:33:21 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,10 @@ t_node	*ft_create_lst(void)
 {
 	t_node	*head;
 
-	head = ft_newnode(NULL);
+	head = ft_newnode(-1);
 	if (head == NULL)
 		return (NULL);
+	head->order = -1;
 	head->prev = head;
 	head->next = head;
 	return (head);

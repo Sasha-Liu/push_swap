@@ -6,13 +6,13 @@
 /*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 17:38:59 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/11 17:43:30 by hsliu            ###   ########.fr       */
+/*   Updated: 2023/01/12 11:05:19 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lstft.h"
 
-t_node	*ft_newnode(void *data)
+t_node	*ft_newnode(int data)
 {
 	t_node	*new_node;
 
