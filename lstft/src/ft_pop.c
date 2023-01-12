@@ -6,7 +6,7 @@
 /*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 18:09:15 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/11 21:24:11 by hsliu            ###   ########.fr       */
+/*   Updated: 2023/01/12 10:55:47 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ t_node	*ft_pop(t_node **head)
 	t_node	*first;
 	t_node	*second;
 	t_node	*last;
-	
+
 	if (ft_isempty(*head))
 		return (NULL);
 	first = *head;

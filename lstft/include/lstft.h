@@ -6,7 +6,7 @@
 /*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 14:00:05 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/11 22:01:41 by hsliu            ###   ########.fr       */
+/*   Updated: 2023/01/12 10:55:12 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,15 +16,16 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
-typedef struct s_node t_node;
 
+typedef struct s_node	t_node;
 //must have a node with data = NULL
 //to mark the end and the begining
+
 typedef struct s_node{
-    void    *data;
-	int		order;
-    t_node  *prev;
-    t_node  *next;
+	void		*data;
+	int			order;
+	t_node		*prev;
+	t_node		*next;
 }t_node;
 
 /********** basic list operation **********/

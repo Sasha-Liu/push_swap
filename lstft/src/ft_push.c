@@ -6,7 +6,7 @@
 /*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 17:49:53 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/11 18:08:38 by hsliu            ###   ########.fr       */
+/*   Updated: 2023/01/12 10:55:55 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_push(t_node **head, t_node *node)
 	t_node	*first;
 	t_node	*last;
 	int		size;
-	
+
 	size = ft_lstlen(*head);
 	first = *head;
 	last = first->prev;
