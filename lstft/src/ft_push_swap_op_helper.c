@@ -6,7 +6,7 @@
 /*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 13:30:47 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/12 13:30:49 by hsliu            ###   ########.fr       */
+/*   Updated: 2023/01/12 13:43:51 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,8 @@ void	push(t_node **a, t_node **b)
 {
 	t_node	*node;
 
-	node = ft_pop(*b);
-	ft_push(*a, node);
+	node = ft_pop(b);
+	ft_push(a, node);
 }
 
 void	rotate(t_node **a)
