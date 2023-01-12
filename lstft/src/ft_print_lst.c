@@ -6,7 +6,7 @@
 /*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 21:36:48 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/12 11:37:57 by hsliu            ###   ########.fr       */
+/*   Updated: 2023/01/12 15:44:41 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	ft_print_lst(t_node *head)
 		write(1, "List is empty\n", 15);
 		return ;
 	}
-	while (head->data != -1)
+	while (head->order != -1)
 	{
 		ft_print_node(head);
 		head = head->next;

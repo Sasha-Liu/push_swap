@@ -6,7 +6,7 @@
 /*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 13:30:47 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/12 13:43:51 by hsliu            ###   ########.fr       */
+/*   Updated: 2023/01/12 15:45:30 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,13 +40,13 @@ void	push(t_node **a, t_node **b)
 void	rotate(t_node **a)
 {
 	*a = (*a)->next;
-	if ((*a)->data == -1)
+	if ((*a)->order == -1)
 		*a = (*a)->next;
 }
 
 void	rev_rotate(t_node **a)
 {
 	*a = (*a)->prev;
-	if ((*a)->data == -1)
+	if ((*a)->order == -1)
 		*a = (*a)->prev;
 }

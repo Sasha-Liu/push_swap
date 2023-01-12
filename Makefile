@@ -10,7 +10,7 @@ LIST_SRC	=
 
 LIST_OBJ	=	$(LIST_SRC:.c=.o)
 
-LIST_INC	=	
+LIST_INC	=	push_swap.h
 
 SRC		=	$(addprefix $(SRC_DIR), $(LIST_SRC))
 
@@ -18,9 +18,13 @@ OBJ		=	$(addprefix $(OBJ_DIR), $(LIST_OBJ))
 
 INC		=	$(addprefix $(INC_DIR), $(LIST_INC))
 
-LIB_DIR	=	lstft
+LIBFT_DIR	=	libftprintf
 
-LIB		=	lstft/lstft.a
+LIBFT		=	libftprintf/libftprintf.a
+
+LSTFT_DIR	=	lstft
+
+LSTFT_DIR	=	lstft/lstft.a
 
 CC		=	cc
 
@@ -28,17 +32,20 @@ CFLAGS	=	-Wall -Wextra -Werror
 
 all: $(NAME)
 
-$(NAME)	:	$(OBJ_DIR) $(OBJ) $(INC) $(LIB)
+$(NAME)	:	$(OBJ_DIR) $(OBJ) $(INC) $(LIBFT) $(LSTFT)
 	$(CC) $(CFLAGS) -o $(NAME) $(OBJ) $(LIB)
 
-$(OBJ_DIR)%.o : $(SRC_DIR)%.c $(INC)
+$(OBJ_DIR)%.o : $(SRC_DIR)%.c $(INC) 
 	$(CC) $(CFLAGS) -c $< -o $@ -I $(INC_DIR)
 
 $(OBJ_DIR) : 
 	mkdir -p $(OBJ_DIR)
 
-$(LIB) : $(LIB_DIR)
-	$(MAKE) -C $(LIB_DIR)
+$(LIBFT) : $(LIBFT_DIR)
+	$(MAKE) -C $(LIBFT_DIR)
+
+$(LSTFT) : $(LSTFT_DIR)
+	$(MAKE) -C $(LSTFT_DIR)
 
 clean : 
 	rm -rf $(OBJ_DIR)

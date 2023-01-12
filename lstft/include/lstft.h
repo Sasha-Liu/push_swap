@@ -6,7 +6,7 @@
 /*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 14:00:05 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/12 13:32:57 by hsliu            ###   ########.fr       */
+/*   Updated: 2023/01/12 15:35:00 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,19 +54,16 @@ void	rotate(t_node **a);
 void	rev_rotate(t_node **a);
 
 /**********  push swap opration  **********/
-void    sa(t_stack stack);
-void    sb(t_stack stack);
-void    ss(t_stack stack);
-void    pa(t_stack stack);
-void    pb(t_stack stack);
-void    ra(t_stack stack);
-void    rb(t_stack stack);
-void    rr(t_stack stack);
-void    rra(t_stack stack);
-void    rrb(t_stack stack);
-void    rrr(t_stack stack);
-
-
-
+void	sa(t_stack stack);
+void	sb(t_stack stack);
+void	ss(t_stack stack);
+void	pa(t_stack stack);
+void	pb(t_stack stack);
+void	ra(t_stack stack);
+void	rb(t_stack stack);
+void	rr(t_stack stack);
+void	rra(t_stack stack);
+void	rrb(t_stack stack);
+void	rrr(t_stack stack);
 
 #endif
