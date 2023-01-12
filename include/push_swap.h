@@ -1,27 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_newnode.c                                       :+:      :+:    :+:   */
+/*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/11 17:38:59 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/12 16:32:28 by hsliu            ###   ########.fr       */
+/*   Created: 2023/01/12 15:27:50 by hsliu             #+#    #+#             */
+/*   Updated: 2023/01/12 15:52:07 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "lstft.h"
+#ifndef PUSH_SWAP_H
+# define  PUSH_SWAP_H
 
-t_node	*ft_newnode(int data)
-{
-	t_node	*new_node;
+# include "lstft.h"
+# include "ft_printf.h"
+# include "libft.h"
+//# include <limits.h>
 
-	new_node = malloc(sizeof(t_node));
-	if (new_node == NULL)
-		return (NULL);
-	new_node->data = data;
-	new_node->order = 0;
-	new_node->prev = NULL;
-	new_node->next = NULL;
-	return (new_node);
-}
+
+
+#endif
