@@ -6,7 +6,7 @@
 /*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 15:41:38 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/12 16:38:43 by hsliu            ###   ########.fr       */
+/*   Updated: 2023/01/13 10:49:35 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,22 @@ int	ft_is_underflow(char *num)
 }
 
 //return 1 if there are duplicates
-int	ft_check_dup()
+//check from head to tail
+//the node before head is not checked
+int	ft_check_dup(t_node *head)
 {
-	
+	t_node	*node;
+
+	while (head->order != -1)
+	{
+		node = head->next;
+		while (node->order != -1)
+		{
+			if (head->data == node->data)
+				return (1);
+			node = node->next;			
+		}
+		head = head->next;
+	}
+	return (0);
 }
