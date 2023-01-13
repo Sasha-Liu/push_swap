@@ -6,7 +6,7 @@
 /*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 10:50:54 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/13 16:53:17 by hsliu            ###   ########.fr       */
+/*   Updated: 2023/01/13 17:21:22 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ t_node	**ft_init_data(t_node **head, int n, char **input)
 {
 	t_node	*node;
 	int		i;
-	
+
 	i = n - 1;
 	while (i >= 0)
 	{
@@ -61,14 +61,14 @@ void	ft_init_order(t_node *head)
 	int		order;
 	int		size;
 	t_node	*node;
-	
+
 	order = 1;
 	size = ft_lstlen(head);
 	while (1)
 	{
 		node = ft_next_node(head);
 		if (node == NULL)
-			break;
+			break ;
 		node = ft_find_min(node, size);
 		node->order = order;
 		order++;
@@ -82,7 +82,7 @@ static t_node	*ft_find_min(t_node *node, int size)
 {
 	int		i;
 	t_node	*min;
-	
+
 	i = 0;
 	min = node;
 	while (i <= size)
