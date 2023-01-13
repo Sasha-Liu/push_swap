@@ -6,12 +6,14 @@
 /*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 21:05:14 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/12 11:26:34 by hsliu            ###   ########.fr       */
+/*   Updated: 2023/01/13 10:37:09 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lstft.h"
 
+//if lst have lenth n
+//then it has n node + 1 tail node
 void	ft_delete_lst(t_node **head)
 {
 	t_node	*curr;
