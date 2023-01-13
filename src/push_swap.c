@@ -6,7 +6,7 @@
 /*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 15:16:44 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/13 12:33:51 by hsliu            ###   ########.fr       */
+/*   Updated: 2023/01/13 12:52:36 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,19 @@
 
 int	main(int argc, char **argv)
 {
-	ft_printf("%d", ft_is_int(argc - 1, argv + 1));
+	t_stack	*stack;
+	t_node	*a;
+	t_node	*b;
+
+	a = ft_create_lst();
+	b = ft_create_lst();
+	stack->a = &a;
+	stack->b = &b;
+	
+	
 }
+
+//check err
+//init stack
+//sort
+//free
