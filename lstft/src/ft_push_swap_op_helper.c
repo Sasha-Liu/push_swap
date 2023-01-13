@@ -6,7 +6,7 @@
 /*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 13:30:47 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/12 15:45:30 by hsliu            ###   ########.fr       */
+/*   Updated: 2023/01/13 17:07:17 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@ void	push(t_node **a, t_node **b)
 	t_node	*node;
 
 	node = ft_pop(b);
+	if (node == NULL)
+		return ;
 	ft_push(a, node);
 }
 

@@ -6,7 +6,8 @@ OBJ_DIR	=	./.obj/
 
 INC_DIR	=	./include/
 
-LIST_SRC	=	push_swap.c ft_input_err.c ft_init_stack.c
+LIST_SRC	=	push_swap.c ft_input_err.c ft_init_stack.c \
+				ft_malloc_stack.c
 
 LIST_OBJ	=	$(LIST_SRC:.c=.o)
 

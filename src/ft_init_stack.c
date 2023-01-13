@@ -6,7 +6,7 @@
 /*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 10:50:54 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/13 12:23:52 by hsliu            ###   ########.fr       */
+/*   Updated: 2023/01/13 16:53:17 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,28 +15,40 @@
 static t_node	*ft_next_node(t_node *node);
 static t_node	*ft_find_min(t_node *node, int size);
 
+int	ft_init_stack(t_stack *stack, int n, char **input)
+{
+	stack->a = ft_init_data(stack->a, n, input);
+	if (stack->a == NULL)
+	{
+		write(2, "ft_init_data fails\n", 20);
+		return (-1);
+	}
+	if (ft_check_dup(*(stack->a)) == 1)
+	{
+		write(2, "Error\n", 6);
+		return (-1);
+	}
+	ft_init_order(*(stack->a));
+	return (0);
+}
+
 //argv is an array of strings, each is a valid integer
 //n is the size of stack, and array
-//if n is 0, stack would be empty
-t_node	*ft_init_data(int n, char **input)
+t_node	**ft_init_data(t_node **head, int n, char **input)
 {
 	t_node	*node;
-	t_node	*head;
 	int		i;
-
-	head = ft_create_lst();
-	if (head == NULL)
-		return (NULL);
+	
 	i = n - 1;
 	while (i >= 0)
 	{
 		node = ft_newnode(ft_atoi(input[i]));
 		if (node == NULL)
 		{
-			ft_delete_lst(&head);
+			ft_delete_lst(head);
 			return (NULL);
 		}
-		ft_push(&head, node);
+		ft_push(head, node);
 		i--;
 	}
 	return (head);
@@ -54,7 +66,6 @@ void	ft_init_order(t_node *head)
 	size = ft_lstlen(head);
 	while (1)
 	{
-		ft_print_lst(head);
 		node = ft_next_node(head);
 		if (node == NULL)
 			break;
