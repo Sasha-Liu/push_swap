@@ -6,7 +6,7 @@
 /*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 10:50:54 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/13 11:36:39 by hsliu            ###   ########.fr       */
+/*   Updated: 2023/01/13 12:23:52 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,8 @@ t_node	*ft_init_data(int n, char **input)
 	head = ft_create_lst();
 	if (head == NULL)
 		return (NULL);
-	i = 0;
-	while (i < n)
+	i = n - 1;
+	while (i >= 0)
 	{
 		node = ft_newnode(ft_atoi(input[i]));
 		if (node == NULL)
@@ -37,7 +37,7 @@ t_node	*ft_init_data(int n, char **input)
 			return (NULL);
 		}
 		ft_push(&head, node);
-		i++;
+		i--;
 	}
 	return (head);
 }
@@ -54,6 +54,7 @@ void	ft_init_order(t_node *head)
 	size = ft_lstlen(head);
 	while (1)
 	{
+		ft_print_lst(head);
 		node = ft_next_node(head);
 		if (node == NULL)
 			break;
@@ -88,13 +89,14 @@ static t_node	*ft_find_min(t_node *node, int size)
 //if all is init, return NULL
 static t_node	*ft_next_node(t_node *node)
 {
+	while (node->order != -1)
+		node = node->next;
+	node = node->next;
 	while (node->order != 0)
+	{
 		node = node->next;
-	if (node->order == -1)
-		node = node->next;
-	while (node->order != 0)
-		node = node->next;
-	if (node->order == -1)
-		return (NULL);
+		if (node->order == -1)
+			return (NULL);
+	}
 	return (node);
 }

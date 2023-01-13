@@ -6,7 +6,7 @@
 /*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 15:16:44 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/12 15:35:59 by hsliu            ###   ########.fr       */
+/*   Updated: 2023/01/13 12:33:51 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,5 @@
 
 int	main(int argc, char **argv)
 {
-	//check input
-	//init two stack
-	//sort
-	//clean up
+	ft_printf("%d", ft_is_int(argc - 1, argv + 1));
 }

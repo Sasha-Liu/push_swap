@@ -6,7 +6,7 @@
 /*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 21:36:48 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/13 10:40:42 by hsliu            ###   ########.fr       */
+/*   Updated: 2023/01/13 12:16:11 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,8 @@ void	ft_print_lst(t_node *head)
 		head = head->next;
 		size--;
 	}
-	write(1, "tail -> ", 8);
+	write(1, "tail: ", 6);
+	ft_print_node(head);
 	head = head->next;
 	while (size > 0)
 	{	

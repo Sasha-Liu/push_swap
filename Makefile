@@ -6,7 +6,7 @@ OBJ_DIR	=	./.obj/
 
 INC_DIR	=	./include/
 
-LIST_SRC	=	
+LIST_SRC	=	push_swap.c ft_input_err.c ft_init_stack.c
 
 LIST_OBJ	=	$(LIST_SRC:.c=.o)
 
@@ -24,7 +24,7 @@ LIBFT		=	libftprintf/libftprintf.a
 
 LSTFT_DIR	=	lstft
 
-LSTFT_DIR	=	lstft/lstft.a
+LSTFT	=	lstft/lstft.a
 
 CC		=	cc
 
@@ -33,7 +33,7 @@ CFLAGS	=	-Wall -Wextra -Werror
 all: $(NAME)
 
 $(NAME)	:	$(OBJ_DIR) $(OBJ) $(INC) $(LIBFT) $(LSTFT)
-	$(CC) $(CFLAGS) -o $(NAME) $(OBJ) $(LIB)
+	$(CC) $(CFLAGS) -o $(NAME) $(OBJ) $(LIBFT) $(LSTFT)
 
 $(OBJ_DIR)%.o : $(SRC_DIR)%.c $(INC) 
 	$(CC) $(CFLAGS) -c $< -o $@ -I $(INC_DIR)
