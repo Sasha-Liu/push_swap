@@ -5,29 +5,29 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/11 21:05:14 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/13 10:37:09 by hsliu            ###   ########.fr       */
+/*   Created: 2023/01/14 18:26:05 by hsliu             #+#    #+#             */
+/*   Updated: 2023/01/14 18:29:44 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lstft.h"
 
-//if lst have lenth n
-//then it has n node + 1 tail node
-void	ft_delete_lst(t_node **head)
+void	ft_delete_lst(t_node **lst)
 {
-	t_node	*curr;
+	t_node	*node;
 	t_node	*next;
 	int		size;
-
-	curr = *head;
-	size = ft_lstlen(curr);
-	while (size >= 0)
+	
+	if (*lst == NULL)
+		return ;
+	node = *lst;
+	size = ft_lstlen(*lst);
+	while (size > 0)
 	{
-		next = curr->next;
-		free(curr);
-		curr = next;
+		next = node->next;
+		free(node);
+		node = next;
 		size--;
 	}
-	*head = NULL;
+	*lst = NULL;
 }

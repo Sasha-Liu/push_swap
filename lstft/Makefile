@@ -7,7 +7,7 @@ OBJ_DIR	=	./.obj/
 
 INC_DIR	=	./include/
 
-LIST_SRC	=	ft_create_lst.c ft_delete_lst.c ft_newnode.c \
+LIST_SRC	=	ft_newnode.c ft_delete_lst.c \
 				ft_lstlen.c ft_isempty.c ft_push.c ft_pop.c\
 				ft_putnbr_fd.c ft_print_lst.c\
 				ft_push_swap_op_helper.c ft_push_swap_op_1.c \

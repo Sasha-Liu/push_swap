@@ -6,7 +6,7 @@
 /*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 17:49:53 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/12 10:55:55 by hsliu            ###   ########.fr       */
+/*   Updated: 2023/01/14 21:51:07 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,24 +16,19 @@ void	ft_push(t_node **head, t_node *node)
 {
 	t_node	*first;
 	t_node	*last;
-	int		size;
 
-	size = ft_lstlen(*head);
+	if (*head == NULL)
+	{
+		node->next = node;
+		node->prev = node;
+		*head = node;
+		return ;
+	}
 	first = *head;
 	last = first->prev;
-	if (size == 0)
-	{
-		node->next = first;
-		node->prev = first;
-		first->next = node;
-		first->prev = node;
-	}
-	else
-	{
-		node->next = first;
-		node->prev = last;
-		first->prev = node;
-		last->next = node;
-	}
+	node->next = first;
+	node->prev = last;
+	last->next = node;
+	first->prev = node;
 	*head = node;
 }

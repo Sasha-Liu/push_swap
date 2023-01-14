@@ -6,15 +6,15 @@
 /*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 19:58:03 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/11 19:59:17 by hsliu            ###   ########.fr       */
+/*   Updated: 2023/01/14 17:59:22 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lstft.h"
 
-int	ft_isempty(t_node *head)
+int	ft_isempty(t_node *node)
 {
-	if (ft_lstlen(head) == 0)
+	if (ft_lstlen(node) == 0)
 		return (1);
 	return (0);
 }

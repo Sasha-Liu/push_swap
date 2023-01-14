@@ -6,7 +6,7 @@
 /*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 14:00:05 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/13 17:01:29 by hsliu            ###   ########.fr       */
+/*   Updated: 2023/01/14 21:43:37 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@
 
 typedef struct s_node	t_node;
 typedef struct s_stack	t_stack;
-//must have a node with data = -1, order = -1
-//to mark the end and the begining
+//the head node will have head = 1
+//other node have head = 0
 typedef struct s_node{
 	int		data;
 	int		order;
@@ -37,10 +37,9 @@ typedef struct s_stack{
 int		ft_lstlen(t_node *head);
 int		ft_isempty(t_node *head);
 t_node	*ft_newnode(int data);
-t_node	*ft_create_lst(void);
-void	ft_delete_lst(t_node **head);
 void	ft_push(t_node **head, t_node *node);
 t_node	*ft_pop(t_node **head);
+void	ft_delete_lst(t_node **lst);
 
 /********** printing function **********/
 void	ft_putchar_fd(char c, int fd);

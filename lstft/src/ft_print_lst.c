@@ -6,7 +6,7 @@
 /*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 21:36:48 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/13 12:16:11 by hsliu            ###   ########.fr       */
+/*   Updated: 2023/01/14 21:50:37 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,27 +15,23 @@
 static void	ft_print_node(t_node *node);
 
 //print the data and the order in paranthese
-void	ft_print_lst(t_node *head)
+void	ft_print_lst(t_node *lst)
 {
 	int	size;
 
-	size = ft_lstlen(head);
-	while (head->order != -1)
+	size = ft_lstlen(lst);
+	if (size == 0)
 	{
-		ft_print_node(head);
-		head = head->next;
-		size--;
+		write(1, "empty\n", 6);
+		return ;
 	}
-	write(1, "tail: ", 6);
-	ft_print_node(head);
-	head = head->next;
 	while (size > 0)
-	{	
-		ft_print_node(head);
-		head = head->next;
+	{
+		ft_print_node(lst);
+		lst = lst->next;
 		size--;
 	}
-	ft_putchar_fd('\n', 1);
+	write(1, "\n", 1);
 }
 
 static void	ft_print_node(t_node *node)
