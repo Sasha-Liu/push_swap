@@ -6,29 +6,38 @@
 /*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 10:50:54 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/13 17:21:22 by hsliu            ###   ########.fr       */
+/*   Updated: 2023/01/14 23:40:43 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static t_node	*ft_next_node(t_node *node);
-static t_node	*ft_find_min(t_node *node, int size);
-
 int	ft_init_stack(t_stack *stack, int n, char **input)
 {
+	int	*tab;
+	
 	stack->a = ft_init_data(stack->a, n, input);
 	if (stack->a == NULL)
 	{
 		write(2, "ft_init_data fails\n", 20);
 		return (-1);
 	}
-	if (ft_check_dup(*(stack->a)) == 1)
+	tab = ft_malloc_and_sort(n, input);
+	if (tab == NULL)
 	{
-		write(2, "Error\n", 6);
+		write(2, "ft_malloc_and_sort fails\n", 25);
+		free(stack->a);
 		return (-1);
 	}
-	ft_init_order(*(stack->a));
+	if (ft_check_dup(tab, n) == -1)
+	{
+		write(2, "Error\n", 6);
+		free(stack->a);
+		free(tab);
+		return (-1);
+	}
+	ft_init_order(*(stack->a), tab);
+	free(tab);
 	return (0);
 }
 
@@ -52,62 +61,4 @@ t_node	**ft_init_data(t_node **head, int n, char **input)
 		i--;
 	}
 	return (head);
-}
-
-//initialize the order according to data
-//order 1 is the smallest int on the stack
-void	ft_init_order(t_node *head)
-{
-	int		order;
-	int		size;
-	t_node	*node;
-
-	order = 1;
-	size = ft_lstlen(head);
-	while (1)
-	{
-		node = ft_next_node(head);
-		if (node == NULL)
-			break ;
-		node = ft_find_min(node, size);
-		node->order = order;
-		order++;
-	}
-}
-
-//node is uninitialize, and is the starting point
-//the function iterates through the list
-//looking for another node with smaller data, and is unitialize 
-static t_node	*ft_find_min(t_node *node, int size)
-{
-	int		i;
-	t_node	*min;
-
-	i = 0;
-	min = node;
-	while (i <= size)
-	{
-		if (node->order == 0 && node->data < min->data)
-			min = node;
-		i++;
-		node = node->next;
-	}
-	return (min);
-}
-
-//look for the next node that's not initialize
-//skip tail node who has order -1
-//if all is init, return NULL
-static t_node	*ft_next_node(t_node *node)
-{
-	while (node->order != -1)
-		node = node->next;
-	node = node->next;
-	while (node->order != 0)
-	{
-		node = node->next;
-		if (node->order == -1)
-			return (NULL);
-	}
-	return (node);
 }

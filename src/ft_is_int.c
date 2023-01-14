@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_input_err.c                                     :+:      :+:    :+:   */
+/*   ft_is_int.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 15:41:38 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/14 22:10:23 by hsliu            ###   ########.fr       */
+/*   Updated: 2023/01/14 22:14:26 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,27 +81,5 @@ int	ft_is_underflow(char *num)
 		return (0);
 	if (ft_strncmp(num, "2147483648", 10) > 0)
 		return (1);
-	return (0);
-}
-
-//return 1 if there are duplicates
-int	ft_check_dup(t_node *head)
-{
-	t_node	*start;
-	t_node	*node;
-
-	
-	
-	while (head != start)
-	{
-		node = head->next;
-		while (node->order != -1)
-		{
-			if (head->data == node->data)
-				return (1);
-			node = node->next;
-		}
-		head = head->next;
-	}
 	return (0);
 }
