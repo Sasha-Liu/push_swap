@@ -6,39 +6,39 @@
 /*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 13:30:56 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/13 17:01:49 by hsliu            ###   ########.fr       */
+/*   Updated: 2023/01/15 15:42:52 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lstft.h"
 
-void	sa(t_stack stack)
+void	sa(t_stack *stack)
 {
-	swap(stack.a);
+	swap(&(stack->a));
 	write(1, "sa\n", 3);
 }
 
-void	sb(t_stack stack)
+void	sb(t_stack *stack)
 {
-	swap(stack.b);
+	swap(&(stack->b));
 	write(1, "sb\n", 3);
 }
 
-void	ss(t_stack stack)
+void	ss(t_stack *stack)
 {
-	swap(stack.a);
-	swap(stack.b);
+	swap(&(stack->a));
+	swap(&(stack->b));
 	write(1, "ss\n", 3);
 }
 
-void	pa(t_stack stack)
+void	pa(t_stack *stack)
 {
-	push(stack.a, stack.b);
+	push(&(stack->a), &(stack->b));
 	write(1, "pa\n", 3);
 }
 
-void	pb(t_stack stack)
+void	pb(t_stack *stack)
 {
-	push(stack.b, stack.a);
+	push(&(stack->b), &(stack->a));
 	write(1, "pb\n", 3);
 }
