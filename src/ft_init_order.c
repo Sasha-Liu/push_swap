@@ -6,7 +6,7 @@
 /*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 22:58:14 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/14 23:30:35 by hsliu            ###   ########.fr       */
+/*   Updated: 2023/01/15 16:16:46 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ void	ft_init_order(t_node *a, int tab[])
 	int	size;
 	int	i;
 
-	size = ft_lstlen(*(stack->a));
+	size = ft_lstlen(a);
 	i = 0;
 	while (i < size)
 	{
@@ -74,7 +74,7 @@ static int	ft_data_order(int data, int tab[], int size)
 	while (i < size)
 	{
 		if (data == tab[i])
-			return (i);
+			return (i + 1);
 		i++;
 	}
 	return (-1);

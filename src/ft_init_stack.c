@@ -6,7 +6,7 @@
 /*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 10:50:54 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/14 23:40:43 by hsliu            ###   ########.fr       */
+/*   Updated: 2023/01/15 16:00:48 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_init_stack(t_stack *stack, int n, char **input)
 {
 	int	*tab;
 	
-	stack->a = ft_init_data(stack->a, n, input);
+	ft_init_data(&(stack->a), n, input);
 	if (stack->a == NULL)
 	{
 		write(2, "ft_init_data fails\n", 20);
@@ -36,14 +36,14 @@ int	ft_init_stack(t_stack *stack, int n, char **input)
 		free(tab);
 		return (-1);
 	}
-	ft_init_order(*(stack->a), tab);
+	ft_init_order(stack->a, tab);
 	free(tab);
 	return (0);
 }
 
 //argv is an array of strings, each is a valid integer
 //n is the size of stack, and array
-t_node	**ft_init_data(t_node **head, int n, char **input)
+void	ft_init_data(t_node **head, int n, char **input)
 {
 	t_node	*node;
 	int		i;
@@ -55,10 +55,8 @@ t_node	**ft_init_data(t_node **head, int n, char **input)
 		if (node == NULL)
 		{
 			ft_delete_lst(head);
-			return (NULL);
 		}
 		ft_push(head, node);
 		i--;
 	}
-	return (head);
 }

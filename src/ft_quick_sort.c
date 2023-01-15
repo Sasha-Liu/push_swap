@@ -6,7 +6,7 @@
 /*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 22:18:26 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/14 23:32:25 by hsliu            ###   ########.fr       */
+/*   Updated: 2023/01/15 16:15:32 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 #include <stdio.h>
 
 static void	ft_swap(int *a, int *b);
+static int	ft_partition(int tab[], int start, int end);
 
-static int	ft_partition(int tab[], int start, int end)
 //sort the data within tab[start - end]
 void	ft_quick_sort(int tab[], int start, int end)
 {
