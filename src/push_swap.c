@@ -6,7 +6,7 @@
 /*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 15:16:44 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/16 15:25:02 by hsliu            ###   ########.fr       */
+/*   Updated: 2023/01/16 16:41:59 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,12 +36,21 @@ int	main(int argc, char **argv)
 	
 	pb(stack);
 	pb(stack);
+	pb(stack);
+	ft_sort_three_a(stack);
+	ft_sort_three_b(stack);
 	ft_printf("a: ");
 	ft_print_lst(stack->a);
 	ft_printf("b: ");
 	ft_print_lst(stack->b);
 	ret = ft_op_required(stack, 0, rotate);
 	ft_printf("ret: %d  rotate[]: %d %d\n", ret, rotate[0], rotate[1]);
+	ft_exec_op(stack, rotate);
+	ft_printf("a: ");
+	ft_print_lst(stack->a);
+	ft_printf("b: ");
+	ft_print_lst(stack->b);
 	//test end
+
 	ft_free(&stack);
 }
