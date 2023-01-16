@@ -6,7 +6,7 @@
 /*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 15:41:38 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/14 22:14:26 by hsliu            ###   ########.fr       */
+/*   Updated: 2023/01/16 10:38:50 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,8 @@ int	ft_is_overflow(char *num)
 {
 	if (*num == '-')
 		return (0);
+	if (*num == '+')
+		num++;
 	if (ft_strlen(num) > 10)
 		return (1);
 	else if (ft_strlen(num) < 10)
