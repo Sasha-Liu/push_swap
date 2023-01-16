@@ -6,7 +6,7 @@
 /*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 22:58:14 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/15 16:16:46 by hsliu            ###   ########.fr       */
+/*   Updated: 2023/01/16 17:35:16 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	*ft_malloc_and_sort(int n, char **input)
 	if (tab == NULL)
 	{
 		write(2, "malloc fails\n", 13);
-		exit(0);
+		return (NULL);
 	}
 	i = 0;
 	while (i < n)

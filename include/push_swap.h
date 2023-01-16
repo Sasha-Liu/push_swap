@@ -6,7 +6,7 @@
 /*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 15:27:50 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/16 16:40:32 by hsliu            ###   ########.fr       */
+/*   Updated: 2023/01/16 17:01:57 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,5 +66,9 @@ int	ft_max(int a, int b);
 
 /*********  ft_exec_op.c  **********/
 void	ft_exec_op(t_stack *stack, int rotate[]);
+
+/*********  ft_sort.c  **********/
+void	ft_sort(t_stack *stack);
+void	ft_cheapest_node(t_stack *stack, int rotate[]);
 
 #endif

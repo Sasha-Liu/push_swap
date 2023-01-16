@@ -6,7 +6,7 @@
 /*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 12:01:28 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/16 15:23:25 by hsliu            ###   ########.fr       */
+/*   Updated: 2023/01/16 17:15:46 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,7 @@ int	ft_op_required(t_stack *stack, int n, int rotate[])
 		i++;
 	}
 	order = a->order;
-	ft_printf("order: %d\n", order);
 	b_pos = ft_get_pos(stack->b, order);
-	ft_printf("b_pos: %d\n", b_pos);
 	rotate[0] = ft_rx_required(n, stack->a);
 	rotate[1] = ft_rx_required(b_pos, stack->b);
 	if (ft_abs(rotate[0] + rotate[1]) < ft_abs(rotate[0]))

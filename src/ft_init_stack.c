@@ -6,7 +6,7 @@
 /*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 10:50:54 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/16 12:07:37 by hsliu            ###   ########.fr       */
+/*   Updated: 2023/01/16 17:37:52 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,13 @@ int	ft_init_stack(t_stack *stack, int n, char **input)
 	if (tab == NULL)
 	{
 		write(2, "ft_malloc_and_sort fails\n", 25);
-		free(stack->a);
+		ft_delete_lst(&(stack->a));
 		return (-1);
 	}
-	if (ft_check_dup(tab, n) == -1)
+	if (ft_check_dup(tab, n) == 1)
 	{
 		write(2, "Error\n", 6);
-		free(stack->a);
+		ft_delete_lst(&(stack->a));
 		free(tab);
 		return (-1);
 	}
@@ -41,7 +41,7 @@ int	ft_init_stack(t_stack *stack, int n, char **input)
 	return (0);
 }
 
-//argv is an array of strings, each is a valid integer
+//input is an array of strings, each is a valid integer
 //n is the size of stack, and array
 void	ft_init_data(t_node **head, int n, char **input)
 {
