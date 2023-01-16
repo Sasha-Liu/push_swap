@@ -6,7 +6,7 @@
 /*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 15:16:44 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/16 12:05:50 by hsliu            ###   ########.fr       */
+/*   Updated: 2023/01/16 13:10:39 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	main(int argc, char **argv)
 	//test begin
 	ft_print_lst(stack->a);
 	ft_print_lst(stack->b);
-	ft_is_sorted(stack);
+	ft_sort_three_a(stack);
 	ft_print_lst(stack->a);
 	ft_print_lst(stack->b);
 	//test end

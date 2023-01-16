@@ -8,7 +8,7 @@ INC_DIR	=	./include/
 
 LIST_SRC	=	push_swap.c ft_is_int.c  ft_init_stack.c \
 				ft_quick_sort.c ft_malloc_stack.c\
-			   	ft_init_order.c	ft_is_sorted.c
+			   	ft_init_order.c	ft_is_sorted.c ft_sort_three.c
 
 LIST_OBJ	=	$(LIST_SRC:.c=.o)
 

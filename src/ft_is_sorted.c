@@ -6,7 +6,7 @@
 /*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 11:37:46 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/16 12:08:05 by hsliu            ###   ########.fr       */
+/*   Updated: 2023/01/16 13:10:04 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,13 @@
 //then do the require op and return 1
 //otherwise 
 //do nothing and return 0
-int	ft_is_sorted(t_stack *stack)
+int	ft_is_sorted(t_stack *stack, t_node *x, void (*ft_simple_rx)(t_stack *))
 {	
-	if (ft_check_if_sorted(stack->a) == 1)
+	if (ft_isempty(x))
+		return (1);
+	if (ft_check_if_sorted(x) == 1)
 	{
-		ft_simple_rotations(stack);
+		ft_simple_rx(stack);
 		return (1);
 	}
 	return (0);
@@ -52,8 +54,8 @@ int	ft_check_if_sorted(t_node *a)
 	return (1);
 }
 
-//if stack only need a few rra or ra to be sorted
-void	ft_simple_rotations(t_stack *stack)
+//if stack only need a few rr or r to be sorted
+void	ft_simple_ra(t_stack *stack)
 {
 	int	rotate;
 
@@ -72,6 +74,30 @@ void	ft_simple_rotations(t_stack *stack)
 		{
 			rotate++;
 			rra(stack);
+		}
+	}
+}
+
+//if stack only need a few rr or r to be sorted
+void	ft_simple_rb(t_stack *stack)
+{
+	int	rotate;
+
+	rotate = ft_rotate_amount(stack->b);
+	if (rotate >= 0)
+	{
+		while (rotate != 0)
+		{
+			rotate--;
+			rb(stack);
+		}
+	}
+	else
+	{
+		while (rotate != 0)
+		{
+			rotate++;
+			rrb(stack);
 		}
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 15:27:50 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/16 11:55:05 by hsliu            ###   ########.fr       */
+/*   Updated: 2023/01/16 13:09:13 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int		ft_check_dup(int tab[], int size);
 
 /**********  initialize stack  **********/
 t_stack	*ft_malloc_stack(void);
-int	    ft_init_stack(t_stack *stack, int n, char **input);
+int		ft_init_stack(t_stack *stack, int n, char **input);
 void	ft_init_data(t_node **head, int n, char **input);
 void	ft_init_order(t_node *a, int tab[]);
 
@@ -37,11 +37,14 @@ void	ft_init_order(t_node *a, int tab[]);
 void	ft_free(t_stack **stack);
 
 /*********  ft_is_sorted  **********/
-int	    ft_is_sorted(t_stack *stack);
-int	    ft_check_if_sorted(t_node *a);
-void	ft_simple_rotations(t_stack *stack);
-int	    ft_rotate_amount(t_node *a);
+int		ft_is_sorted(t_stack *stack, t_node *x, void (*ft)(t_stack *));
+int		ft_check_if_sorted(t_node *a);
+void	ft_simple_ra(t_stack *stack);
+void	ft_simple_rb(t_stack *stack);
+int		ft_rotate_amount(t_node *a);
 
-
+/*********  ft_sort_three  **********/
+void    ft_sort_three_a(t_stack *stack);
+void    ft_sort_three_b(t_stack *stack);
 
 #endif
