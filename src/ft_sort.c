@@ -6,14 +6,12 @@
 /*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 17:31:13 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/13 17:50:09 by hsliu            ###   ########.fr       */
+/*   Updated: 2023/01/16 12:10:01 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void    ft_sort(t_stack *stack)
+void	ft_sort(t_stack *stack)
 {
-
-    
 }

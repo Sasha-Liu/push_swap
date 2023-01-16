@@ -6,7 +6,7 @@
 /*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 11:37:46 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/16 11:54:52 by hsliu            ###   ########.fr       */
+/*   Updated: 2023/01/16 12:08:05 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int	ft_check_if_sorted(t_node *a)
 {
 	int	len;
 	int	i;
-	
+
 	len = ft_lstlen(a);
 	while (a->order != 1)
 	{

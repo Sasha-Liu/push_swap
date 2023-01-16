@@ -6,7 +6,7 @@
 /*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 16:06:33 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/15 16:12:01 by hsliu            ###   ########.fr       */
+/*   Updated: 2023/01/16 12:08:21 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 t_stack	*ft_malloc_stack(void)
 {
 	t_stack	*stack;
-	
+
 	stack = malloc(sizeof(t_stack));
 	if (stack == NULL)
 	{

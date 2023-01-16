@@ -6,7 +6,7 @@
 /*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 10:50:54 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/15 16:00:48 by hsliu            ###   ########.fr       */
+/*   Updated: 2023/01/16 12:07:37 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	ft_init_stack(t_stack *stack, int n, char **input)
 {
 	int	*tab;
-	
+
 	ft_init_data(&(stack->a), n, input);
 	if (stack->a == NULL)
 	{

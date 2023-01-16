@@ -6,7 +6,7 @@
 /*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 22:18:26 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/15 16:15:32 by hsliu            ###   ########.fr       */
+/*   Updated: 2023/01/16 12:09:02 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	ft_quick_sort(int tab[], int start, int end)
 
 	if (start >= end)
 		return ;
-	pivot = ft_partition(tab, start, end);	
+	pivot = ft_partition(tab, start, end);
 	ft_quick_sort(tab, start, pivot - 1);
 	ft_quick_sort(tab, pivot + 1, end);
 }
@@ -32,18 +32,18 @@ void	ft_quick_sort(int tab[], int start, int end)
 //sort in ascending order
 static int	ft_partition(int tab[], int start, int end)
 {
-	int pivot;
+	int	pivot;
 
 	pivot = end;
 	end--;
 	while (start <= end)
 	{
 		while (tab[start] < tab[pivot])
-			start++;		
+			start++;
 		while (tab[end] > tab[pivot])
 			end--;
 		if (start >= end)
-			break;
+			break ;
 		ft_swap(tab + start, tab + end);
 	}
 	ft_swap(tab + pivot, tab + start);
