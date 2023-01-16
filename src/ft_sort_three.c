@@ -6,7 +6,7 @@
 /*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 12:28:12 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/16 13:35:15 by hsliu            ###   ########.fr       */
+/*   Updated: 2023/01/16 15:28:30 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,4 +30,10 @@ void    ft_sort_three_a(t_stack *stack)
 		return ;
 	sa(stack);
 	ft_a_is_sorted(stack);
+}
+
+void	ft_sort_three_b(t_stack *stack)
+{
+
+	
 }

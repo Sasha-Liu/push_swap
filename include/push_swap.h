@@ -6,7 +6,7 @@
 /*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 15:27:50 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/16 13:34:22 by hsliu            ###   ########.fr       */
+/*   Updated: 2023/01/16 15:08:24 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,19 +36,27 @@ void	ft_init_order(t_node *a, int tab[]);
 /**********  free resources  **********/
 void	ft_free(t_stack **stack);
 
-/*********  ft_is_sorted  **********/
+/*********  ft_is_sorted.c  **********/
 int		ft_a_is_sorted(t_stack *stack);
 int		ft_check_if_sorted(t_node *a);
 void	ft_simple_ra(t_stack *stack);
 int		ft_rotate_amount(t_node *a);
 
-/*********  ft_sort_three  **********/
+/*********  ft_sort_three.c  **********/
 void    ft_sort_three_a(t_stack *stack);
 void    ft_sort_three_b(t_stack *stack);
 
+/*********  ft_op_required.c  **********/
+int	ft_op_required(t_stack *stack, int n, int rotate[]);
+int	ft_rx_required(int n, t_node *x);
+int	ft_get_pos(t_node *b, int order);
+int	ft_smaller_pos(t_node *b, int order);
+int	ft_max_pos(t_node *b);
 
-/*********  utils  **********/
+/*********  utils.c  **********/
 int	ft_min_order(t_node *a);
+int	ft_max_order(t_node *a);
 int	ft_abs(int a);
+int	ft_max(int a, int b);
 
 #endif

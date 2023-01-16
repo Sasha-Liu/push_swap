@@ -6,7 +6,7 @@
 /*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 11:16:39 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/16 13:32:50 by hsliu            ###   ########.fr       */
+/*   Updated: 2023/01/16 15:07:38 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,37 @@ int	ft_min_order(t_node *a)
 	return (min);
 }
 
+int	ft_max_order(t_node *a)
+{
+	int	len;
+	int	i;
+	int	max;
+
+	len = ft_lstlen(a);
+	if (len == 0)
+		return (-1);
+	i = 0;
+	max = a->order;
+	while (i < len)
+	{
+		if (a->order > max)
+			max = a->order;
+		a = a->next;
+		i++;
+	}
+	return (max);
+}
+
 int	ft_abs(int a)
 {
 	if (a < 0)
 		return (-a);
 	return (a);
+}
+
+int	ft_max(int a, int b)
+{
+	if (a >= b)
+		return (a);
+	return (b);
 }
