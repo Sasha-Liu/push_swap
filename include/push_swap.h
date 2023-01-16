@@ -6,7 +6,7 @@
 /*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 15:27:50 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/15 16:13:06 by hsliu            ###   ########.fr       */
+/*   Updated: 2023/01/16 11:55:05 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,12 @@ void	ft_init_order(t_node *a, int tab[]);
 /**********  free resources  **********/
 void	ft_free(t_stack **stack);
 
-/*********  sort  **********/
-//int	ft_is_sorted(t_node *head);
+/*********  ft_is_sorted  **********/
+int	    ft_is_sorted(t_stack *stack);
+int	    ft_check_if_sorted(t_node *a);
+void	ft_simple_rotations(t_stack *stack);
+int	    ft_rotate_amount(t_node *a);
+
 
 
 #endif
