@@ -6,7 +6,7 @@
 /*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 11:37:46 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/16 13:10:04 by hsliu            ###   ########.fr       */
+/*   Updated: 2023/01/16 13:34:09 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,13 @@
 //then do the require op and return 1
 //otherwise 
 //do nothing and return 0
-int	ft_is_sorted(t_stack *stack, t_node *x, void (*ft_simple_rx)(t_stack *))
+int	ft_a_is_sorted(t_stack *stack)
 {	
-	if (ft_isempty(x))
+	if (ft_isempty(stack->a))
 		return (1);
-	if (ft_check_if_sorted(x) == 1)
+	if (ft_check_if_sorted(stack->a) == 1)
 	{
-		ft_simple_rx(stack);
+		ft_simple_ra(stack);
 		return (1);
 	}
 	return (0);
@@ -37,9 +37,11 @@ int	ft_check_if_sorted(t_node *a)
 {
 	int	len;
 	int	i;
+	int	min_order;
 
 	len = ft_lstlen(a);
-	while (a->order != 1)
+	min_order = ft_min_order(a);
+	while (a->order != min_order)
 	{
 		a = a->next;
 	}
@@ -54,7 +56,7 @@ int	ft_check_if_sorted(t_node *a)
 	return (1);
 }
 
-//if stack only need a few rr or r to be sorted
+//if stack only need a few rra or ra to be sorted
 void	ft_simple_ra(t_stack *stack)
 {
 	int	rotate;
@@ -78,45 +80,23 @@ void	ft_simple_ra(t_stack *stack)
 	}
 }
 
-//if stack only need a few rr or r to be sorted
-void	ft_simple_rb(t_stack *stack)
-{
-	int	rotate;
-
-	rotate = ft_rotate_amount(stack->b);
-	if (rotate >= 0)
-	{
-		while (rotate != 0)
-		{
-			rotate--;
-			rb(stack);
-		}
-	}
-	else
-	{
-		while (rotate != 0)
-		{
-			rotate++;
-			rrb(stack);
-		}
-	}
-}
-
 int	ft_rotate_amount(t_node *a)
 {
 	int	rotate;
 	int	rev_rotate;
 	int	len;
+	int	min_order;
 
 	rotate = 0;
 	len = ft_lstlen(a);
-	while (a->order != 1)
+	min_order = ft_min_order(a);
+	while (a->order != min_order)
 	{
 		rotate++;
 		a = a->next;
 	}
 	rev_rotate = rotate - len;
-	if (abs(rev_rotate) < rotate)
+	if (ft_abs(rev_rotate) < rotate)
 		return (rev_rotate);
 	return (rotate);
 }

@@ -6,7 +6,7 @@
 /*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 12:28:12 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/16 13:09:04 by hsliu            ###   ########.fr       */
+/*   Updated: 2023/01/16 13:35:15 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,18 +26,8 @@ void    ft_sort_three_a(t_stack *stack)
 {
 	if (ft_lstlen(stack->a) != 3)
 		return ;
-	if (ft_is_sorted(stack, stack->a, ft_simple_ra) == 1)
+	if (ft_a_is_sorted(stack) == 1)
 		return ;
 	sa(stack);
-	ft_is_sorted(stack, stack->a, ft_simple_ra);
-}
-
-void    ft_sort_three_b(t_stack *stack)
-{
-	if (ft_lstlen(stack->b) != 3)
-		return ;
-	if (ft_is_sorted(stack, stack->b, ft_simple_rb) == 1)
-		return ;
-	sb(stack);
-	ft_is_sorted(stack, stack->b, ft_simple_rb);
+	ft_a_is_sorted(stack);
 }

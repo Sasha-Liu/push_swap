@@ -6,7 +6,7 @@
 /*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 15:16:44 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/16 13:10:39 by hsliu            ###   ########.fr       */
+/*   Updated: 2023/01/16 13:34:36 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,11 @@ int	main(int argc, char **argv)
 		return (0);
 	}
 	//test begin
+	ft_print_lst(stack->a);
+	ft_print_lst(stack->b);
+	pb(stack);
+	pb(stack);
+	pb(stack);
 	ft_print_lst(stack->a);
 	ft_print_lst(stack->b);
 	ft_sort_three_a(stack);
