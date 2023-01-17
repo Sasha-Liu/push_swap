@@ -6,7 +6,7 @@
 /*   By: sasha <sasha@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 15:41:38 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/17 14:20:38 by sasha            ###   ########.fr       */
+/*   Updated: 2023/01/17 14:34:43 by sasha            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,8 @@ int	ft_is_number(char *num)
 	if (*num == '-' || *num == '+')
 		num++;
 	if (*num == '0' && ft_strncmp(num, "0", 2) != 0)
+		return (0);
+	if (*num == '\0')
 		return (0);
 	while ('0' <= *num && *num <= '9')
 		num++;
