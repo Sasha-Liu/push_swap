@@ -6,7 +6,7 @@
 /*   By: sasha <sasha@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 15:27:50 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/17 13:21:10 by sasha            ###   ########.fr       */
+/*   Updated: 2023/01/17 13:52:36 by sasha            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,5 +78,8 @@ void	ft_rotate_a(t_stack *stack, int rotate);
 int	    ft_get_pos2(t_node *a, int order);
 int	    ft_bigger_pos(t_node *a, int order);
 int	    ft_min_pos(t_node *a);
+
+/*********  ft_a_is_small.c  **********/
+int	ft_a_is_small(t_stack *stack);
 
 #endif

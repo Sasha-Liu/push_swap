@@ -6,16 +6,17 @@
 /*   By: sasha <sasha@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 17:31:13 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/17 13:22:55 by sasha            ###   ########.fr       */
+/*   Updated: 2023/01/17 13:52:53 by sasha            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-
 void	ft_sort(t_stack *stack)
 {
 	if (ft_a_is_sorted(stack))
+		return ;
+	if (ft_a_is_small(stack))
 		return ;
 	pb(stack);
 	pb(stack);
@@ -34,7 +35,7 @@ void	ft_sort_middle(t_stack *stack)
 {
 	int	rotate[2];
 	int	len;
-	
+
 	len = ft_lstlen(stack->a);
 	while (len > 3)
 	{

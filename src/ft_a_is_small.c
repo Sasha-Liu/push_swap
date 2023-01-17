@@ -1,36 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   ft_a_is_small.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sasha <sasha@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/12 15:16:44 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/17 13:56:15 by sasha            ###   ########.fr       */
+/*   Created: 2023/01/17 13:40:15 by sasha             #+#    #+#             */
+/*   Updated: 2023/01/17 13:56:40 by sasha            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main(int argc, char **argv)
+//if a has 3 - 5 item
+//then  sort it and return 1
+//otherwise return 0 and do no op
+//NOTE: if a has 0 - 2 item, it would be sort by ft_a_is_sorted, 
+//which is called before this function
+int	ft_a_is_small(t_stack *stack)
 {
-	t_stack	*stack;
+	int	len;
 
-	if (!ft_is_int(argc - 1, argv + 1))
-	{
+	len = ft_lstlen(stack->a);
+    if (len >= 6)
 		return (0);
-	}
-	stack = ft_malloc_stack();
-	if (stack == NULL)
+	while (len > 3)
 	{
-		return (0);
+		pb(stack);
+		len--;
 	}
-	if (ft_init_stack(stack, argc - 1, argv + 1) == -1)
-	{
-		ft_free(&stack);
-		return (0);
-	}
-	ft_sort(stack);
-	ft_print_lst(stack->a);
-	ft_free(&stack);
+	ft_sort_three_a(stack);
+	ft_push_back(stack);
+	ft_a_is_sorted(stack);
+	return (1);
 }
