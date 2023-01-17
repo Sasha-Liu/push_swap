@@ -7,7 +7,9 @@ OBJ_DIR	=	./.obj/
 INC_DIR	=	./include/
 
 LIST_SRC	=	checker.c ft_init_order.c ft_init_stack.c \
-				ft_is_int.c ft_malloc_stack.c ft_quick_sort.c
+				ft_is_int.c ft_malloc_stack.c ft_quick_sort.c \
+				ft_check_input.c ft_check_res.c ft_check.c \
+				ft_exec_input.c ft_read_input.c
 
 LIST_OBJ	=	$(LIST_SRC:.c=.o)
 

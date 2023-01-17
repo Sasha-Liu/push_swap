@@ -1,35 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   checker.c                                          :+:      :+:    :+:   */
+/*   ft_check.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sasha <sasha@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/17 14:49:56 by sasha             #+#    #+#             */
-/*   Updated: 2023/01/17 16:28:49 by sasha            ###   ########.fr       */
+/*   Created: 2023/01/17 16:24:30 by sasha             #+#    #+#             */
+/*   Updated: 2023/01/17 16:30:11 by sasha            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
 
-int	main(int argc, char **argv)
+void    ft_check(t_stack *stack)
 {
-	t_stack	*stack;
+    char    *input;
 
-	if (!ft_is_int(argc - 1, argv + 1))
-	{
-		return (0);
-	}
-	stack = ft_malloc_stack();
-	if (stack == NULL)
-	{
-		return (0);
-	}
-	if (ft_init_stack(stack, argc - 1, argv + 1) == -1)
-	{
-		ft_free(&stack);
-		return (0);
-	}
-	ft_check(stack);
-	ft_free(&stack);
+    input = ft_read_stdin();
+    if (ft_check_input(&input) == -1)
+        return ;
+    ft_exec_input(stack, input);
+    free(input);
+    ft_check_res(stack);
 }
