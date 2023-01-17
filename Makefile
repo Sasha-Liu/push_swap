@@ -39,6 +39,9 @@ all: $(NAME)
 $(NAME)	:	$(OBJ_DIR) $(OBJ) $(INC) $(LIBFT) $(LSTFT)
 	$(CC) $(CFLAGS) -o $(NAME) $(OBJ) $(LIBFT) $(LSTFT)
 
+bonus:
+	$(MAKE) -C bonus
+
 $(OBJ_DIR)%.o : $(SRC_DIR)%.c $(INC) 
 	$(CC) $(CFLAGS) -c $< -o $@ -I $(INC_DIR)
 
@@ -59,4 +62,4 @@ fclean: clean
 
 re:	fclean $(NAME)
 
-.PHONY: clean fclearn re all
+.PHONY: clean fclearn re all bonus

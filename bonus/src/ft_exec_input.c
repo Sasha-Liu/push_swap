@@ -6,7 +6,7 @@
 /*   By: sasha <sasha@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 15:53:20 by sasha             #+#    #+#             */
-/*   Updated: 2023/01/17 16:48:16 by hsliu            ###   ########.fr       */
+/*   Updated: 2023/01/17 17:25:36 by sasha            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,16 @@ void	ft_exec_1(t_stack *stack, char **input)
 	{
 		*input += 3;
 		ss_x(stack);
+	}
+	else if (ft_strncmp("pa\n", *input, 3) == 0)
+	{
+		*input += 3;
+		pa_x(stack);
+	}
+	else if (ft_strncmp("pb\n", *input, 3) == 0)
+	{
+		*input += 3;
+		pb_x(stack);
 	}
 }
 

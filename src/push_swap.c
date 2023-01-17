@@ -6,7 +6,7 @@
 /*   By: sasha <sasha@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 15:16:44 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/17 13:56:15 by sasha            ###   ########.fr       */
+/*   Updated: 2023/01/17 16:53:36 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,5 @@ int	main(int argc, char **argv)
 		return (0);
 	}
 	ft_sort(stack);
-	ft_print_lst(stack->a);
 	ft_free(&stack);
 }

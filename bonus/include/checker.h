@@ -6,7 +6,7 @@
 /*   By: sasha <sasha@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 14:59:22 by sasha             #+#    #+#             */
-/*   Updated: 2023/01/17 16:30:28 by sasha            ###   ########.fr       */
+/*   Updated: 2023/01/17 17:21:45 by sasha            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,9 @@ char	*ft_read_stdin(void);
 int	    ft_read(char **input);
 
 /**********  ft_check_input.c  **********/
-int	ft_check_input(char **input);
-int	ft_parse_input(char *input);
+int	    ft_check_input(char **input);
+int	    ft_parse_input(char *input);
+void	ft_parse_input_2(char **input, int *res);
 
 /**********  ft_exec_input.c  **********/
 void    ft_exec_input(t_stack *stack, char *input);
