@@ -3,19 +3,34 @@
 /*                                                        :::      ::::::::   */
 /*   ft_sort.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
+/*   By: sasha <sasha@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/13 17:31:13 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/16 17:27:03 by hsliu            ###   ########.fr       */
+/*   Updated: 2023/01/17 13:22:55 by sasha            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+
+void	ft_sort(t_stack *stack)
+{
+	if (ft_a_is_sorted(stack))
+		return ;
+	pb(stack);
+	pb(stack);
+	pb(stack);
+	ft_sort_three_b(stack);
+	ft_sort_middle(stack);
+	ft_sort_three_a(stack);
+	ft_push_back(stack);
+	ft_a_is_sorted(stack);
+}
+
 //iterate through stack
 //use ft_op_required to decide which node to push
 //use ft_exec_op to execute
-void	ft_sort(t_stack *stack)
+void	ft_sort_middle(t_stack *stack)
 {
 	int	rotate[2];
 	int	len;
