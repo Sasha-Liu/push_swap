@@ -6,7 +6,7 @@
 /*   By: sasha <sasha@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 15:53:20 by sasha             #+#    #+#             */
-/*   Updated: 2023/01/17 17:25:36 by sasha            ###   ########.fr       */
+/*   Updated: 2023/01/17 17:39:11 by sasha            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,17 +74,17 @@ void	ft_exec_3(t_stack *stack, char **input)
 {
 	if (ft_strncmp("rra\n", *input, 4) == 0)
 	{
-		*input += 3;
+		*input += 4;
 		rra_x(stack);
 	}
 	else if (ft_strncmp("rrb\n", *input, 4) == 0)
 	{
-		*input += 3;
+		*input += 4;
 		rrb_x(stack);
 	}
 	else if (ft_strncmp("rrr\n", *input, 4) == 0)
 	{
-		*input += 3;
+		*input += 4;
 		rrr_x(stack);
 	}
 }
