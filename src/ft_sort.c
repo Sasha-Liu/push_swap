@@ -24,9 +24,6 @@ void	ft_sort(t_stack *stack)
 	while (len > 3)
 	{
 		ft_cheapest_node(stack, rotate);
-		ft_print_lst(stack->a);
-		ft_print_lst(stack->b);
-		ft_printf("rotate: %d %d\n", rotate[0], rotate[1]);
 		ft_exec_op(stack, rotate);
 		len--;
 	}

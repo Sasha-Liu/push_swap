@@ -31,25 +31,25 @@ int	main(int argc, char **argv)
 		return (0);
 	}
 	//test begin
-//	int	rotate[2];
-//	int	ret;
+	//int	rotate[2];
+	//int	ret;
 	
 	pb(stack);
 	pb(stack);
 	pb(stack);
 	ft_sort_three_b(stack);
-	
-	ft_printf("a: ");
-	ft_print_lst(stack->a);
-	ft_printf("b: ");
-	ft_print_lst(stack->b);
+
+	//ft_printf("a: ");
+	//ft_print_lst(stack->a);
+	//ft_printf("b: ");
+	//ft_print_lst(stack->b);
 	
 	ft_sort(stack);
 
-	ft_printf("a: ");
-	ft_print_lst(stack->a);
-	ft_printf("b: ");
-	ft_print_lst(stack->b);
+	//ft_printf("\na: ");
+	//ft_print_lst(stack->a);
+	//ft_printf("b: ");
+	//ft_print_lst(stack->b);
 	//test end
 
 	ft_free(&stack);

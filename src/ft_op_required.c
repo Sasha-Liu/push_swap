@@ -76,7 +76,7 @@ int	ft_smaller_pos(t_node *b, int order)
 	len = ft_lstlen(b);
 	while (i < len)
 	{
-		if (b->prev->order > order && b->next->order < order)
+		if (b->prev->order > order && b->order < order)
 			return (i);
 		b = b->next;
 		i++;
