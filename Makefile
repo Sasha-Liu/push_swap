@@ -6,10 +6,11 @@ OBJ_DIR	=	./.obj/
 
 INC_DIR	=	./include/
 
-LIST_SRC	=	push_swap.c ft_is_int.c  ft_init_stack.c \
-				ft_quick_sort.c ft_malloc_stack.c\
-			   	ft_init_order.c	ft_a_is_sorted.c ft_sort_three.c utils.c ft_push_back.c ft_a_is_small.c\
-				ft_op_required.c ft_exec_op.c ft_sort.c
+LIST_SRC	=	ft_a_is_small.c ft_a_is_sorted.c ft_exec_op.c \
+				ft_init_order.c ft_init_stack.c ft_is_int.c \
+				ft_malloc_stack.c ft_op_required.c ft_push_back.c \
+				ft_quick_sort.c ft_sort_three.c ft_sort.c \
+				push_swap.c utils.c 
 
 LIST_OBJ	=	$(LIST_SRC:.c=.o)
 
