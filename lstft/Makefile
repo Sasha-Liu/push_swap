@@ -11,7 +11,10 @@ LIST_SRC	=	ft_newnode.c ft_delete_lst.c \
 				ft_lstlen.c ft_isempty.c ft_push.c ft_pop.c\
 				ft_putnbr_fd.c ft_print_lst.c\
 				ft_push_swap_op_helper.c ft_push_swap_op_1.c \
-				ft_push_swap_op_2.c ft_push_swap_op_3.c
+				ft_push_swap_op_2.c ft_push_swap_op_3.c \
+				ft_push_swap_op_4.c ft_push_swap_op_5.c \
+				ft_push_swap_op_6.c  
+
 
 LIST_OBJ	=	$(LIST_SRC:.c=.o)
 

@@ -6,7 +6,7 @@
 /*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 14:00:05 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/15 15:43:26 by hsliu            ###   ########.fr       */
+/*   Updated: 2023/01/17 16:46:24 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,5 +64,19 @@ void	rr(t_stack *stack);
 void	rra(t_stack *stack);
 void	rrb(t_stack *stack);
 void	rrr(t_stack *stack);
+
+
+/**********  push swap opration with no message  **********/
+void	sa_x(t_stack *stack);
+void	sb_x(t_stack *stack);
+void	ss_x(t_stack *stack);
+void	pa_x(t_stack *stack);
+void	pb_x(t_stack *stack);
+void	ra_x(t_stack *stack);
+void	rb_x(t_stack *stack);
+void	rr_x(t_stack *stack);
+void	rra_x(t_stack *stack);
+void	rrb_x(t_stack *stack);
+void	rrr_x(t_stack *stack);
 
 #endif
