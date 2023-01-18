@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sasha <sasha@student.42.fr>                +#+  +:+       +#+        */
+/*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 15:27:50 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/17 13:52:36 by sasha            ###   ########.fr       */
+/*   Updated: 2023/01/18 15:35:22 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,11 @@
 # include "../lstft/include/lstft.h"
 # include "../libftprintf/ft_printf.h"
 # include "../libftprintf/libft/libft.h"
-//# include <limits.h>
+
+/**********  ft_is_int.c   **********/
+void	ft_set_input(int argc, char **argv, int *n, char ***input);
+int	    ft_strs_len(char **strs);
+int	    ft_is_empty_str(char *str);
 
 /**********  ft_is_int.c   **********/
 int		ft_is_int(int n, char **input);
