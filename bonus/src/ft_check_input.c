@@ -6,7 +6,7 @@
 /*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 15:52:40 by sasha             #+#    #+#             */
-/*   Updated: 2023/01/18 16:00:46 by hsliu            ###   ########.fr       */
+/*   Updated: 2023/01/18 17:37:49 by hsliu            ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_check_input(char **input)
 	{
 		free(*input);
 		*input = NULL;
-		write(2, "Error (check input)\n", 20);
+		write(2, "Error\n", 6);
 		return (-1);
 	}
 	return (1);
@@ -34,6 +34,8 @@ int	ft_parse_input(char *input)
 	while (*input)
 	{
 		ft_parse_input_2(&input, &res);
+		if (res == -1)
+			break ;
 	}
 	return (res);
 }
