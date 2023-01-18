@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_a_is_small.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sasha <sasha@student.42.fr>                +#+  +:+       +#+        */
+/*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 13:40:15 by sasha             #+#    #+#             */
-/*   Updated: 2023/01/17 13:56:40 by sasha            ###   ########.fr       */
+/*   Updated: 2023/01/18 15:49:09 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ft_a_is_small(t_stack *stack)
 	int	len;
 
 	len = ft_lstlen(stack->a);
-    if (len >= 6)
+	if (len >= 6)
 		return (0);
 	while (len > 3)
 	{

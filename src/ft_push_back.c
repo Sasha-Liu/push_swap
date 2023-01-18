@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_push_back.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sasha <sasha@student.42.fr>                +#+  +:+       +#+        */
+/*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 12:24:33 by sasha             #+#    #+#             */
-/*   Updated: 2023/01/17 13:21:13 by sasha            ###   ########.fr       */
+/*   Updated: 2023/01/18 15:53:01 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,16 @@
 //when there are only three items in stack a
 //stack a and b are both sorted
 //push everything on b to a
-void    ft_push_back(t_stack *stack)
+void	ft_push_back(t_stack *stack)
 {
-    int	i;
+	int	i;
 	int	len;
 	int	pos;
 	int	rotate_a;
 
 	i = 0;
 	len = ft_lstlen(stack->b);
-    while (i < len)
+	while (i < len)
 	{
 		pos = ft_get_pos2(stack->a, stack->b->order);
 		rotate_a = ft_rx_required(pos, stack->a);
@@ -39,7 +39,7 @@ void	ft_rotate_a(t_stack *stack, int rotate)
 	while (rotate > 0)
 	{
 		ra(stack);
-		rotate--;	
+		rotate--;
 	}
 	while (rotate < 0)
 	{

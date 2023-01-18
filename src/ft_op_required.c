@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_op_required.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sasha <sasha@student.42.fr>                +#+  +:+       +#+        */
+/*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 12:01:28 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/17 12:29:33 by sasha            ###   ########.fr       */
+/*   Updated: 2023/01/18 15:50:19 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@
 /*
 if rotate[0] and rotate[1] have diffrent sign > abs > addition
 if have same sign > abs > max
-
 */
 int	ft_op_required(t_stack *stack, int n, int rotate[])
 {

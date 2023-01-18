@@ -6,7 +6,7 @@
 /*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 15:16:44 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/18 15:36:50 by hsliu            ###   ########.fr       */
+/*   Updated: 2023/01/18 15:53:54 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	main(int argc, char **argv)
 	t_stack	*stack;
 	int		n;
 	char	**input;
-	
+
 	n = argc - 1;
 	input = argv + 1;
 	ft_set_input(argc, argv, &n, &input);
@@ -38,5 +38,3 @@ int	main(int argc, char **argv)
 	ft_sort(stack);
 	ft_free(&stack);
 }
-
-

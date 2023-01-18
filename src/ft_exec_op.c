@@ -6,7 +6,7 @@
 /*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/16 16:27:05 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/16 16:40:08 by hsliu            ###   ########.fr       */
+/*   Updated: 2023/01/18 15:52:35 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,17 +30,17 @@ void	ft_exec_op(t_stack *stack, int rotate[])
 static void	ft_rotate_together(t_stack *stack, int rotate[])
 {
 	while (rotate[0] < 0 && rotate[1] < 0)
-    {
+	{
 		rotate[0]++;
-        rotate[1]++;
-        rrr(stack);
-    }
-    while (rotate[0] > 0 && rotate[1] > 0)
-    {	
+		rotate[1]++;
+		rrr(stack);
+	}
+	while (rotate[0] > 0 && rotate[1] > 0)
+	{	
 		rotate[0]--;
 		rotate[1]--;
 		rr(stack);
-    }
+	}
 }
 
 static void	ft_rotate_alone(t_stack *stack, int rotate[])
@@ -55,7 +55,7 @@ static void	ft_rotate_alone(t_stack *stack, int rotate[])
 		rotate[0]++;
 		rra(stack);
 	}
-    while (rotate[1] > 0)
+	while (rotate[1] > 0)
 	{
 		rotate[1]--;
 		rb(stack);
