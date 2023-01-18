@@ -6,7 +6,7 @@
 /*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 14:00:05 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/17 16:46:24 by hsliu            ###   ########.fr       */
+/*   Updated: 2023/01/18 16:08:25 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,7 @@
 
 typedef struct s_node	t_node;
 typedef struct s_stack	t_stack;
-//the head node will have head = 1
-//other node have head = 0
+
 typedef struct s_node{
 	int		data;
 	int		order;
@@ -64,7 +63,6 @@ void	rr(t_stack *stack);
 void	rra(t_stack *stack);
 void	rrb(t_stack *stack);
 void	rrr(t_stack *stack);
-
 
 /**********  push swap opration with no message  **********/
 void	sa_x(t_stack *stack);

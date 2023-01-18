@@ -6,7 +6,7 @@
 /*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 14:59:22 by sasha             #+#    #+#             */
-/*   Updated: 2023/01/18 15:43:37 by hsliu            ###   ########.fr       */
+/*   Updated: 2023/01/18 16:07:08 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@
 
 /**********  ft_set_input.c   **********/
 void	ft_set_input(int argc, char **argv, int *n, char ***input);
-int	    ft_strs_len(char **strs);
-int	    ft_is_empty_str(char *str);
+int		ft_strs_len(char **strs);
+int		ft_is_empty_str(char *str);
 
 /**********  ft_init_order.c  **********/
 int		*ft_malloc_and_sort(int n, char **input);
@@ -48,15 +48,15 @@ void	ft_quick_sort(int tab[], int start, int end);
 
 /**********  ft_read_input.c  **********/
 char	*ft_read_stdin(void);
-int	    ft_read(char **input);
+int		ft_read(char **input);
 
 /**********  ft_check_input.c  **********/
-int	    ft_check_input(char **input);
-int	    ft_parse_input(char *input);
+int		ft_check_input(char **input);
+int		ft_parse_input(char *input);
 void	ft_parse_input_2(char **input, int *res);
 
 /**********  ft_exec_input.c  **********/
-void    ft_exec_input(t_stack *stack, char *input);
+void	ft_exec_input(t_stack *stack, char *input);
 void	ft_exec_1(t_stack *stack, char **input);
 void	ft_exec_2(t_stack *stack, char **input);
 void	ft_exec_3(t_stack *stack, char **input);
@@ -65,6 +65,6 @@ void	ft_exec_3(t_stack *stack, char **input);
 void	ft_check_res(t_stack *stack);
 
 /**********  ft_check.c  **********/
-void    ft_check(t_stack *stack);
+void	ft_check(t_stack *stack);
 
 #endif

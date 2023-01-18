@@ -6,12 +6,13 @@
 /*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 13:59:45 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/14 21:44:48 by hsliu            ###   ########.fr       */
+/*   Updated: 2023/01/18 16:07:50 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lstft.h"
 #include <stdio.h>
+
 int	ft_lstlen(t_node *node)
 {
 	int		len;
