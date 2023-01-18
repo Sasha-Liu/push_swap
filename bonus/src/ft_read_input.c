@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_read_input.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sasha <sasha@student.42.fr>                +#+  +:+       +#+        */
+/*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 15:30:44 by sasha             #+#    #+#             */
-/*   Updated: 2023/01/17 15:38:20 by sasha            ###   ########.fr       */
+/*   Updated: 2023/01/18 16:03:41 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 //read from stdin and return the string
 char	*ft_read_stdin(void)
 {
-    char	*input;
+	char	*input;
 
 	input = malloc(sizeof(char));
 	if (input == NULL)
@@ -41,7 +41,7 @@ int	ft_read(char **input)
 
 	buf[1] = '\0';
 	while (1)
-    {
+	{
 		ret = read(0, buf, 1);
 		if (ret == 0)
 			break ;
@@ -50,9 +50,9 @@ int	ft_read(char **input)
 			write(2, "read error\n", 11);
 			return (-1);
 		}
-		temp = ft_strjoin(*input, buf);	
-        free(*input);
+		temp = ft_strjoin(*input, buf);
+		free(*input);
 		*input = temp;
-    }
+	}
 	return (1);
 }

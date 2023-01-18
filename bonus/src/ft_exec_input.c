@@ -3,23 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_exec_input.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sasha <sasha@student.42.fr>                +#+  +:+       +#+        */
+/*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 15:53:20 by sasha             #+#    #+#             */
-/*   Updated: 2023/01/17 17:39:11 by sasha            ###   ########.fr       */
+/*   Updated: 2023/01/18 16:02:32 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "checker.h"
 
-void    ft_exec_input(t_stack *stack, char *input)
+void	ft_exec_input(t_stack *stack, char *input)
 {
 	while (*input)
-    {
+	{
 		ft_exec_1(stack, &input);
 		ft_exec_2(stack, &input);
 		ft_exec_3(stack, &input);
-    }
+	}
 }
 
 void	ft_exec_1(t_stack *stack, char **input)

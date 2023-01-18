@@ -6,7 +6,7 @@
 /*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 15:27:50 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/18 15:43:29 by hsliu            ###   ########.fr       */
+/*   Updated: 2023/01/18 15:57:30 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@
 
 /**********  ft_set_input.c   **********/
 void	ft_set_input(int argc, char **argv, int *n, char ***input);
-int	    ft_strs_len(char **strs);
-int	    ft_is_empty_str(char *str);
+int		ft_strs_len(char **strs);
+int		ft_is_empty_str(char *str);
 
 /**********  ft_is_int.c   **********/
 int		ft_is_int(int n, char **input);
@@ -51,39 +51,39 @@ void	ft_simple_ra(t_stack *stack);
 int		ft_rotate_amount(t_node *a);
 
 /*********  ft_sort_three.c  **********/
-void    ft_sort_three_a(t_stack *stack);
-void    ft_sort_three_b(t_stack *stack);
+void	ft_sort_three_a(t_stack *stack);
+void	ft_sort_three_b(t_stack *stack);
 int		ft_check_if_rev_sorted(t_node *b);
 
 /*********  ft_op_required.c  **********/
-int	ft_op_required(t_stack *stack, int n, int rotate[]);
-int	ft_rx_required(int n, t_node *x);
-int	ft_get_pos(t_node *b, int order);
-int	ft_smaller_pos(t_node *b, int order);
-int	ft_max_pos(t_node *b);
+int		ft_op_required(t_stack *stack, int n, int rotate[]);
+int		ft_rx_required(int n, t_node *x);
+int		ft_get_pos(t_node *b, int order);
+int		ft_smaller_pos(t_node *b, int order);
+int		ft_max_pos(t_node *b);
 
 /*********  utils.c  **********/
-int	ft_min_order(t_node *a);
-int	ft_max_order(t_node *a);
-int	ft_abs(int a);
-int	ft_max(int a, int b);
+int		ft_min_order(t_node *a);
+int		ft_max_order(t_node *a);
+int		ft_abs(int a);
+int		ft_max(int a, int b);
 
 /*********  ft_exec_op.c  **********/
 void	ft_exec_op(t_stack *stack, int rotate[]);
 
 /*********  ft_sort.c  **********/
-void    ft_sort(t_stack *stack);
+void	ft_sort(t_stack *stack);
 void	ft_sort_middle(t_stack *stack);
 void	ft_cheapest_node(t_stack *stack, int rotate[]);
 
 /*********  ft_push_back.c  **********/
-void    ft_push_back(t_stack *stack);
+void	ft_push_back(t_stack *stack);
 void	ft_rotate_a(t_stack *stack, int rotate);
-int	    ft_get_pos2(t_node *a, int order);
-int	    ft_bigger_pos(t_node *a, int order);
-int	    ft_min_pos(t_node *a);
+int		ft_get_pos2(t_node *a, int order);
+int		ft_bigger_pos(t_node *a, int order);
+int		ft_min_pos(t_node *a);
 
 /*********  ft_a_is_small.c  **********/
-int	ft_a_is_small(t_stack *stack);
+int		ft_a_is_small(t_stack *stack);
 
 #endif

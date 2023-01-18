@@ -6,7 +6,7 @@
 /*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 14:49:56 by sasha             #+#    #+#             */
-/*   Updated: 2023/01/18 15:44:01 by hsliu            ###   ########.fr       */
+/*   Updated: 2023/01/18 15:58:52 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	main(int argc, char **argv)
 	t_stack	*stack;
 	int		n;
 	char	**input;
-	
+
 	n = argc - 1;
 	input = argv + 1;
 	ft_set_input(argc, argv, &n, &input);
