@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   checker.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sasha <sasha@student.42.fr>                +#+  +:+       +#+        */
+/*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 14:49:56 by sasha             #+#    #+#             */
-/*   Updated: 2023/01/17 16:28:49 by sasha            ###   ########.fr       */
+/*   Updated: 2023/01/18 15:44:01 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,13 @@
 int	main(int argc, char **argv)
 {
 	t_stack	*stack;
-
-	if (!ft_is_int(argc - 1, argv + 1))
+	int		n;
+	char	**input;
+	
+	n = argc - 1;
+	input = argv + 1;
+	ft_set_input(argc, argv, &n, &input);
+	if (!ft_is_int(n, input))
 	{
 		return (0);
 	}
@@ -25,7 +30,7 @@ int	main(int argc, char **argv)
 	{
 		return (0);
 	}
-	if (ft_init_stack(stack, argc - 1, argv + 1) == -1)
+	if (ft_init_stack(stack, n, input) == -1)
 	{
 		ft_free(&stack);
 		return (0);

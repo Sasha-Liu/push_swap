@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   checker.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sasha <sasha@student.42.fr>                +#+  +:+       +#+        */
+/*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 14:59:22 by sasha             #+#    #+#             */
-/*   Updated: 2023/01/17 17:21:45 by sasha            ###   ########.fr       */
+/*   Updated: 2023/01/18 15:43:37 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,11 @@
 # include "../../libftprintf/libft/libft.h"
 # include <stdlib.h>
 # include <unistd.h>
+
+/**********  ft_set_input.c   **********/
+void	ft_set_input(int argc, char **argv, int *n, char ***input);
+int	    ft_strs_len(char **strs);
+int	    ft_is_empty_str(char *str);
 
 /**********  ft_init_order.c  **********/
 int		*ft_malloc_and_sort(int n, char **input);

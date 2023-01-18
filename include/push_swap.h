@@ -6,7 +6,7 @@
 /*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 15:27:50 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/18 15:35:22 by hsliu            ###   ########.fr       */
+/*   Updated: 2023/01/18 15:43:29 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include "../libftprintf/ft_printf.h"
 # include "../libftprintf/libft/libft.h"
 
-/**********  ft_is_int.c   **********/
+/**********  ft_set_input.c   **********/
 void	ft_set_input(int argc, char **argv, int *n, char ***input);
 int	    ft_strs_len(char **strs);
 int	    ft_is_empty_str(char *str);
