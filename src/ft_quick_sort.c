@@ -6,12 +6,11 @@
 /*   By: sasha <sasha@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 22:18:26 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/19 11:08:14 by sasha            ###   ########.fr       */
+/*   Updated: 2023/01/19 11:12:34 by sasha            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include <stdio.h>
 
 static int	ft_bigger(int a, int b);
 static void	ft_swap(int *a, int *b);
