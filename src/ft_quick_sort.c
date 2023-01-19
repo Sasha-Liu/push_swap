@@ -3,16 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_quick_sort.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
+/*   By: sasha <sasha@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 22:18:26 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/16 12:09:02 by hsliu            ###   ########.fr       */
+/*   Updated: 2023/01/19 11:08:14 by sasha            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 #include <stdio.h>
 
+static int	ft_bigger(int a, int b);
 static void	ft_swap(int *a, int *b);
 static int	ft_partition(int tab[], int start, int end);
 
@@ -38,9 +39,9 @@ static int	ft_partition(int tab[], int start, int end)
 	end--;
 	while (start <= end)
 	{
-		while (tab[start] < tab[pivot])
+		while (ft_bigger(tab[pivot], tab[start]))
 			start++;
-		while (tab[end] > tab[pivot])
+		while (end >= 0 && ft_bigger(tab[end], tab[pivot]))
 			end--;
 		if (start >= end)
 			break ;
@@ -48,6 +49,15 @@ static int	ft_partition(int tab[], int start, int end)
 	}
 	ft_swap(tab + pivot, tab + start);
 	return (start);
+}
+
+static int	ft_bigger(int a, int b)
+{
+	if (a > 0 && b < 0)
+		return (1);
+	if (a < 0 && b > 0)
+		return (0);
+	return (a > b);
 }
 
 static void	ft_swap(int *a, int *b)
