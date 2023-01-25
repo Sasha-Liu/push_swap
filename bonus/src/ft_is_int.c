@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_is_int.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sasha <sasha@student.42.fr>                +#+  +:+       +#+        */
+/*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/12 15:41:38 by hsliu             #+#    #+#             */
-/*   Updated: 2023/01/17 15:11:08 by sasha            ###   ########.fr       */
+/*   Updated: 2023/01/25 14:04:12 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,9 +45,7 @@ int	ft_is_number(char *num)
 {
 	if (*num == '-' || *num == '+')
 		num++;
-	if (*num == '0' && ft_strncmp(num, "0", 2) != 0)
-		return (0);
-	if (*num == '\0')
+	if (*num > '9' || *num < '0')
 		return (0);
 	while ('0' <= *num && *num <= '9')
 		num++;
@@ -62,6 +60,8 @@ int	ft_is_overflow(char *num)
 	if (*num == '-')
 		return (0);
 	if (*num == '+')
+		num++;
+	while (*num == '0')
 		num++;
 	if (ft_strlen(num) > 10)
 		return (1);
@@ -78,6 +78,8 @@ int	ft_is_underflow(char *num)
 	if (*num != '-')
 		return (0);
 	num++;
+	while (*num == '0')
+		num++;
 	if (ft_strlen(num) > 10)
 		return (1);
 	else if (ft_strlen(num) < 10)
