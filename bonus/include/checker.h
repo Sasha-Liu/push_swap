@@ -6,7 +6,7 @@
 /*   By: hsliu <hsliu@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 14:59:22 by sasha             #+#    #+#             */
-/*   Updated: 2023/01/18 16:07:08 by hsliu            ###   ########.fr       */
+/*   Updated: 2023/01/26 10:35:48 by hsliu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,8 @@
 # include <unistd.h>
 
 /**********  ft_set_input.c   **********/
-void	ft_set_input(int argc, char **argv, int *n, char ***input);
+int		ft_set_input(int argc, char **argv, int *n, char ***input);
+void	ft_free_2(char **input);
 int		ft_strs_len(char **strs);
 int		ft_is_empty_str(char *str);
 
